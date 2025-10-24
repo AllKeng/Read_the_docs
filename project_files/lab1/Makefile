@@ -18,9 +18,9 @@ endif
 VITIS_COMPILER := $(shell dirname "$(VITIS_HLS_PATH)")
 
 ifneq (,$(findstring 2024.2,$(VITIS_HLS_PATH)))
-  VHLS := $(VITIS_COMPILER)/../../Vitis/2024.2
+  VHLS := $(VITIS_COMPILER)/../../../Vitis/2024.2
 else
-  VHLS := $(VITIS_COMPILER)/../../Vitis_HLS/2024.1
+  VHLS := $(VITIS_COMPILER)/../../../Vitis_HLS/2024.1
 endif
 
 HLS_COMPILER=vitis-run --mode hls --tcl 
